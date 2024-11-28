@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br" data-bs-theme="dark">
+    <head>
+        <title>Pipoca&Critica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="js/jquery.js" ></script>
+        <script src="js/script.js" ></script>
+        <script src="js/jquery.mask.js"></script>
+    </head>
+    <body class="corpo">
+        <header class="p-5 text-white text-center bglogo">
+
+        </header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categoria.html">Categoria</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+               <ul class="nav justify-content-end">
+                    <li class="nav-item" id="deslogado">
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">Login/Registrar</a>
+                    </li>
+                    <li class="nav-item dropdown" id="logado">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Alterar Cadastro</a></li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- The Modal -->
+         <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                    </div>
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3 mt-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label">Senha:</label>
+                                <input type="text" class="form-control" id="pwd" placeholder="Digite a senha" name="pswd">
+                            </div>
+                            <button type="button"  id="logarPessoa" class="btn btn-primary">Logar</button>
+                        </form>
+                        <div class="alert alert-danger" id="loginInvalido">
+                            <button type="button" class="btn-close" id="closeAlertLoginInvalido"></button>
+                            <strong>Atenção!</strong> O e-mail ou senha inseridos estão incorretos.
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-between">
+                        <a href="cadastrarPessoa.html" class="btn btn-info">Cadastrar</a>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <article class="container-fluid " id="geral">
+            <div class="col-4 text-center m-auto">
+                <h2>Cadastro</h2>
+                <form action="" id="cadastrarPessoa" class="was-validated">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="email" class="form-control" id="emailcadastro" placeholder="Digite seu email" name="email" autofocus required>
+                        <label for="emailcadastro">Email</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="senhacadastro" placeholder="Digite sua senha" name="senhacadastro" required>
+                        <label for="senhacadastro">Password</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome Completo" name="nome" required>
+                        <label for="nome">Nome</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" name="telefone" required>
+                        <label for="telefone">Telefone</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu telefone" name="cpf" required>
+                        <label for="cpf">CPF</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text"  name="cepPessoa" class="form-control" id="cepPessoa"
+                               placeholder="Digite o CEP" required>
+                        <label for="cepPessoa" class="form-label">CEP</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text" name="ruaPessoa" class="form-control" id="ruaPessoa"
+                               placeholder="Digite o nome da Rua" required>
+                        <label for="ruaPessoa" class="form-label">Rua/Avenida</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text" name="bairroPessoa" class="form-control" id="bairroPessoa"
+                               placeholder="Digite o nome do Bairro" required>
+                        <label for="bairroPessoa" class="form-label">Bairro/Setor</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="number" min="0" name="numCasaPessoa" class="form-control" id="numCasaPessoa"
+                               placeholder="Digite número da Casa" required>
+                        <label for="numCasaPessoa" class="form-label">Nº</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text" name="cidadePessoa" class="form-control" id="cidadePessoa"
+                               placeholder="Digite a Cidade" required>
+                        <label for="cidadePessoa" class="form-label">Cidade</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text" name="ufPessoa" class="form-control" id="ufPessoa"
+                               placeholder="Digite o UF" required>
+                        <label for="ufPessoa" class="form-label">Estado</label>
+                    </div>
+                    <div class=" form-floating mb-3 mt-3">
+                        <input type="text" name="complementoPessoa" class="form-control" id="complementoPessoa"
+                               placeholder="Digite o Complemento">
+                        <label for="complementoPessoa" class="form-label">Complemento</label>
+                    </div>
+                    <button type="submit" id="cadastrar" class="btn btn-primary">Cadastrar</button>
+                    <button type="reset" class="btn btn-danger">Limpar</button>
+                </form>
+            </div>
+        </article>
+
+        <div class="mt-5 p-4 bg-dark text-white text-center">
+            <p>Footer</p>
+        </div>
+
+    </body>
+</html>

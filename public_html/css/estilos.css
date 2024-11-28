@@ -1,0 +1,27 @@
+.bglogo{
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    background-size: auto;
+    min-height: 200px;
+}
+#geral{
+    padding: auto;
+    margin: auto;
+}
+.card{
+    margin: 5px;
+}
+.borderx{
+    border: 1px solid black;
+}
+#loginInvalido{
+    margin-top: 10px;
+}
+#nome, #logado > a{
+    text-transform:capitalize;
+}
+.listCategoria{
+    margin: 5px;
+}

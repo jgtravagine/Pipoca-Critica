@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br" data-bs-theme="dark">
+    <head>
+        <title>Pipoca&Critica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="js/jquery.js" ></script>
+        <script src="js/script.js" ></script>
+    </head>
+    <body>
+        <header class="p-5 text-white text-center bglogo">
+
+        </header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categoria.html">Categoria</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item" id="deslogado">
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">Login/Registrar</a>
+                    </li>
+                    <li class="nav-item dropdown dropstart" id="logado">
+                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="alterarPessoa.html" id="alterarCadastro">Alterar Cadastro</a></li>
+                            <li><button type="button" class="dropdown-item" id="fecharSession">Sair</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                    </div>
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3 mt-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label">Senha:</label>
+                                <input type="text" class="form-control" id="pwd" placeholder="Digite a senha" name="pswd">
+                            </div>
+                            <button type="button"  id="logarPessoa" class="btn btn-primary">Logar</button>
+                        </form>
+                        <div class="alert alert-danger" id="loginInvalido">
+                            <button type="button" class="btn-close" id="closeAlertLoginInvalido"></button>
+                            <strong>Atenção!</strong> O e-mail ou senha inseridos estão incorretos.
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-between">
+                        <a href="cadastrarPessoa.html" class="btn btn-info">Cadastrar</a>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <article class="container-fluid row justify-content-center" id="geral">
+
+            <div class="card col-4" style="width:250px" id="card0">
+                <img class="card-img-top h-75" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title"></h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+
+        </article>
+
+        <div class="mt-5 p-4 bg-dark text-white text-center">
+            <p>Footer</p>
+        </div>
+
+    </body>
+</html>
