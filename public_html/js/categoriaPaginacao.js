@@ -25,7 +25,7 @@ function mostrarCards(posicao) {
 
     cardCategoria = jQuery('#cardCategoria0');
     if (posicao === 1 || verificador === 1) {
-        for (var cont = 1; cont < 5; cont++) {
+        for (var cont = 1; cont <=6; cont++) {
             $("#cardCategoria" + cont).remove();
         }
         for (var cont = 1; cont <= 9; cont++) {
